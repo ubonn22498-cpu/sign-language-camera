@@ -17,7 +17,8 @@ body{margin:0;font-family:Arial,sans-serif;background:#0f172a;color:#fff}main{ma
 <div class="box"><button id="tts">🔊 อ่านคำแปล</button> <span id="status" class="small status">กำลังเตรียม AI...</span></div>
 </main>
 <script>
-const params=new URLSearchParams(location.search);const GAS_WEBAPP_URL=params.get('gas')||'https://script.google.com/macros/s/AKfycbxQIJRbi-kO9A-7Cc0bFSP2IzH8IdVEms8Ww8vWBdNXYuOq03NEU5cxI_xu2L8DQeLm/exec';
+const params=new URLSearchParams(location.search);const GAS_WEBAPP_URL=params.get('gas')||'https://script.google.com/macros/s/AKfycbxQIJRbi-kO9A-7Cc0bFSP2IzH8IdVEms8Ww8vWBdNXYuOq03NEU5cxI_xu2L8DQeLm/exec
+ ';
 let stream=null,active=false,raf=0,frameNo=0,processing=false,latestHands=null,latestPose=null,db=[],live=[],recorded=[],recording=false,lastMatch='',lastMatchAt=0;
 const video=document.getElementById('video'),canvas=document.getElementById('canvas'),ctx=canvas.getContext('2d');
 let hands=null,pose=null;
